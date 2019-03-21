@@ -1,0 +1,21 @@
+# ReplicaSet의 목적은 주어진 시간에 실행되는 안정적인 복제 포드 세트를 유지하는 것입니다. 따라서, 이것은 종종 동일한 수의 동일한 포드의 가용성을 보장하는 데 사용됩니다.
+replicaCount: 3
+# 롤백을 허용하기 위해 보유 할 이전 ReplicaSets 수를 지정하는 선택적 필드입니다
+revisionHistoryLimit: 1
+
+image:
+  registry: docker.io
+  repository: jonginout/hello-world-express
+  tag: ${CICD_GIT_COMMIT}
+  pullPolicy: IfNotPresent 
+  containerPort: 8080
+
+# 컨테이너가 동작 중인지 여부를 나타낸다. 만약 활성 프로브(liveness probe)에 실패한다면, kubelet은 컨테이너를 죽이고, 해당 컨테이너는 재시작 정책의 대상이 된다.
+livenessProbe:
+  initialDelaySeconds: 3000
+  periodSeconds: 1000
+
+env: production
+
+# service:
+#   type: LoadBalancer
