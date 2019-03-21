@@ -20,13 +20,13 @@ express-app-chart	https://jonginout.github.io/kubernetes-express-app-chart/stabl
 ```
 $ helm search express-app-chart
 NAME          	CHART VERSION	APP VERSION	DESCRIPTION                
-express-app-chart/app	0.1.0        	1.0        	A Helm chart for Kubernetes
+express-app-chart/express-app	0.1.0        	1.0        	A Helm chart for Kubernetes
 ```
 
 ## Using the chart
 
 ```
-$ helm install express-app-chart/app
+$ helm install express-app-chart/express-app
 NAME:   flippant-narwhal
 LAST DEPLOYED: Wed Oct  3 15:11:52 2018
 NAMESPACE: default
