@@ -6,7 +6,8 @@ revisionHistoryLimit: 1
 image:
   registry: docker.io
   repository: jonginout/hello-world-express
-  tag: ${CICD_GIT_COMMIT}
+  tag: latest
+  # tag: ${CICD_GIT_COMMIT}
   pullPolicy: IfNotPresent 
   containerPort: 8080
 
@@ -17,5 +18,5 @@ livenessProbe:
 
 env: production
 
-# service:
-#   type: LoadBalancer
+service:
+  type: LoadBalancer
