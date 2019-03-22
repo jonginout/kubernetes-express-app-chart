@@ -3,11 +3,11 @@ entries:
   express-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-21T16:46:12.71432+09:00
+    created: 2019-03-22T14:51:16.074158+09:00
     description: A Helm chart for Kubernetes / express-app
-    digest: 22fa01691ee32d6572babc7e3298a7615efed65881a3b6e577b0db178eebc1c1
+    digest: 18e6c4c2266793e070b80de0fc6fc2bfd63bd0b29941afe2b35405f1bef5c331
     name: express-app
     urls:
     - https://jonginout.github.io/kubernetes-express-app-chart/stable/express-app-0.1.0.tgz
     version: 0.1.0
-generated: 2019-03-21T16:46:12.713352+09:00
+generated: 2019-03-22T14:51:16.073127+09:00
