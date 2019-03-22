@@ -35,4 +35,4 @@ spec:
             - containerPort: {{ .Values.image.containerPort }}
           env:
             - name: NODE_ENV
-            value: {{ .Values.env | quote }}
+              value: {{ .Values.env | quote }}
